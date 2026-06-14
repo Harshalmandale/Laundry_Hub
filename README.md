@@ -125,8 +125,8 @@ with your EmailJS credentials.
 ## 👨‍💻 Author
 
 Harshal Mandale33
-- GitHub: https://github.com/your-username
-- LinkedIn: https://linkedin.com/in/your-linkedin
+- GitHub: https://github.com/Harshalmandale
+- LinkedIn: https://linkedin.com/in/harshalm-m01
 
 ---
 
