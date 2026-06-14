@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaundryPro - Expert Laundry Services</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-soap"></i>
+            LaundryPro
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#booking">Services</a></li>
+            <li><a href="#quality">About Us</a></li>
+            <li><a href="#footer">Contact Us</a></li>
+        </ul>
+
+        <div class="nav-right">
+
+            <div class="username">
+                Welcome, User
+            </div>
+
+            <div class="menu-btn" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-left">
+
+            <span class="tagline">
+                Premium Laundry Service
+            </span>
+
+            <h1>
+                Revitalize Your Clothes
+                with Expert Laundry Services!
+            </h1>
+
+            <p>
+                Experience hassle-free laundry care with
+                premium cleaning, timely delivery, and
+                affordable prices designed to simplify your life.
+            </p>
+
+            <button id="heroBtn">
+                Book a Service Today
+            </button>
+
+        </div>
+
+        <div class="hero-right">
+
+            <img src="https://media.istockphoto.com/id/2206023764/photo/laundry-service-owner.webp?a=1&b=1&s=612x612&w=0&k=20&c=OaZIgN9MO5pn0iyK0fdTbndYkRKJqIl898okye5gVx4=33"
+                 alt="Laundry Illustration">
+
+        </div>
+
+    </section>
+
+    <!-- ================= ACHIEVEMENTS ================= -->
+
+    <section class="achievements">
+
+        <div class="achievement">
+
+            <h2>15+</h2>
+
+            <p>Laundry Services</p>
+
+        </div>
+
+        <div class="achievement">
+
+            <h2>240+</h2>
+
+            <p>Happy Customers</p>
+
+        </div>
+
+        <div class="achievement">
+
+            <h2>2+</h2>
+
+            <p>Years Experience</p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= BOOKING ================= -->
+
+    <section class="booking-section" id="booking">
+
+        <!-- LEFT -->
+
+        <div class="services-container">
+
+            <div class="section-header">
+
+                <h2>Our Services</h2>
+
+                <p>
+                    Click on the Add Item button
+                    to add services to your cart.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div>
+                    <h3>Dry Cleaning</h3>
+                    <p>₹200</p>
+                </div>
+
+                <div class="service-buttons">
+
+                    <button class="add-btn"
+                            onclick="addItem('Dry Cleaning',200)">
+                        Add Item
+                    </button>
+
+                    <button class="remove-btn"
+                            onclick="removeItem('Dry Cleaning')">
+                        Remove Item
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="service-card">
+
+                <div>
+                    <h3>Wash & Fold</h3>
+                    <p>₹100</p>
+                </div>
+
+                <div class="service-buttons">
+
+                    <button class="add-btn"
+                            onclick="addItem('Wash & Fold',100)">
+                        Add Item
+                    </button>
+
+                    <button class="remove-btn"
+                            onclick="removeItem('Wash & Fold')">
+                        Remove Item
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="service-card">
+
+                <div>
+                    <h3>Ironing</h3>
+                    <p>₹30</p>
+                </div>
+
+                <div class="service-buttons">
+
+                    <button class="add-btn"
+                            onclick="addItem('Ironing',30)">
+                        Add Item
+                    </button>
+
+                    <button class="remove-btn"
+                            onclick="removeItem('Ironing')">
+                        Remove Item
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="service-card">
+
+                <div>
+                    <h3>Stain Removal</h3>
+                    <p>₹500</p>
+                </div>
+
+                <div class="service-buttons">
+
+                    <button class="add-btn"
+                            onclick="addItem('Stain Removal',500)">
+                        Add Item
+                    </button>
+
+                    <button class="remove-btn"
+                            onclick="removeItem('Stain Removal')">
+                        Remove Item
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="service-card">
+
+                <div>
+                    <h3>Leather & Suede Cleaning</h3>
+                    <p>₹999</p>
+                </div>
+
+                <div class="service-buttons">
+
+                    <button class="add-btn"
+                            onclick="addItem('Leather & Suede Cleaning',999)">
+                        Add Item
+                    </button>
+
+                    <button class="remove-btn"
+                            onclick="removeItem('Leather & Suede Cleaning')">
+                        Remove Item
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="service-card">
+
+                <div>
+                    <h3>Wedding Dress Cleaning</h3>
+                    <p>₹2800</p>
+                </div>
+
+                <div class="service-buttons">
+
+                    <button class="add-btn"
+                            onclick="addItem('Wedding Dress Cleaning',2800)">
+                        Add Item
+                    </button>
+
+                    <button class="remove-btn"
+                            onclick="removeItem('Wedding Dress Cleaning')">
+                        Remove Item
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="booking-container">
+
+            <!-- CART -->
+
+            <div class="cart-box">
+
+                <h2>Added Items</h2>
+
+                <div id="cartItems">
+
+                    <p class="empty-cart">
+                        No items added.
+                    </p>
+
+                </div>
+
+                <div class="total-box">
+
+                    <h3>
+                        Total :
+                        ₹<span id="totalAmount">0</span>
+                    </h3>
+
+                </div>
+
+            </div>
+
+            <!-- BOOK FORM -->
+
+            <div class="booking-form">
+
+                <h2>Book Now</h2>
+
+                <input type="text"
+                       id="fullName"
+                       placeholder="Full Name">
+
+                <input type="email"
+                       id="email"
+                       placeholder="Email Address">
+
+                <input type="tel"
+                       id="phone" pattern="[0-9]{10}" maxlength="10"
+                       placeholder="Phone Number">
+
+
+
+                <button id="bookBtn">
+                    Book Now
+                </button>
+
+                <p id="bookingMessage"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= QUALITY ================= -->
+
+    <section class="quality-section" id="quality">
+
+        <div class="quality-header">
+
+            <h2>Why Choose Us?</h2>
+
+            <p>
+                We deliver quality, convenience,
+                and affordability.
+            </p>
+
+        </div>
+
+        <div class="quality-grid">
+
+            <div class="quality-card">
+
+                <i class="fa-solid fa-crown"></i>
+
+                <h3>Premium Services</h3>
+
+                <p>
+                    High-quality care for every garment.
+                </p>
+
+            </div>
+
+            <div class="quality-card">
+
+                <i class="fa-solid fa-headset"></i>
+
+                <h3>Quick Support</h3>
+
+                <p>
+                    Dedicated customer support anytime.
+                </p>
+
+            </div>
+
+            <div class="quality-card">
+
+                <i class="fa-solid fa-truck-fast"></i>
+
+                <h3>Timely Delivery</h3>
+
+                <p>
+                    Reliable pickup and delivery.
+                </p>
+
+            </div>
+
+            <div class="quality-card">
+
+                <i class="fa-solid fa-tags"></i>
+
+                <h3>Affordable Prices</h3>
+
+                <p>
+                    Premium quality at reasonable rates.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= NEWSLETTER ================= -->
+
+    <section class="newsletter">
+
+        <div class="newsletter-box">
+
+            <h2>Subscribe To Our Newsletter</h2>
+
+            <p>
+                Stay updated with offers and latest news.
+            </p>
+
+            <input type="text"
+                   id="subscriberName"
+                   placeholder="Full Name">
+
+            <input type="email"
+                   id="subscriberEmail"
+                   placeholder="Email Address">
+
+            <button id="subscribeBtn">
+                Subscribe
+            </button>
+
+            <p id="subscribeMessage"></p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="footer">
+
+        <div class="footer-column">
+
+            <div class="logo footer-logo">
+
+                LaundryPro
+            </div>
+
+            <p>
+                Professional laundry solutions
+                you can trust.
+            </p>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>About Us</h3>
+
+            <a href="#">Our Story</a>
+            <a href="#">Mission</a>
+            <a href="#">Values</a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Important Links</h3>
+
+            <a href="#">FAQs</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Contact Us</h3>
+
+            <p>support@laundrypro.com</p>
+            <p>+91 9876543210</p>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Follow Us</h3>
+
+            <div class="social-icons">
+
+                <i class="fab fa-facebook-f"></i>
+
+                <i class="fab fa-instagram"></i>
+
+                <i class="fab fa-twitter"></i>
+
+                <i class="fab fa-linkedin-in"></i>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="email.js"></script>
+
+</body>
+</html>*
